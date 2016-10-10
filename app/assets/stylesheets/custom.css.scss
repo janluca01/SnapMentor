@@ -1,0 +1,68 @@
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.badge {
+	background-color: #CEF6F5;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-weight: bold;
+}
+
+.snapyellow {
+	background-color: #FFFC00;
+	border-radius: 15px;
+}
+
+.red {
+	background-color: #FF000D;
+
+}
+
+.red:hover {
+	background-color: #e5000b;
+}
+
+a.btn.btn-lg.btn-danger.red{
+	color:white;
+}
+
+
+.one {
+	background-image: asset-url('Profilepage.png');
+	background-size: 100%;
+	align: center;
+	border: 1px solid black;
+} 
+
+.two {
+	background-image: asset-url('story.png');
+	background-size: 100%;
+	border: 1px solid black;
+} 
+
+.three {
+	background-image: asset-url('EmmaLee_.png');
+	background-size: 100%;
+	border: 1px solid black;
+} 
+
+.four {
+	background-image: asset-url('Snapchat-large.png');
+	background-size: 100%;
+	border: 1px solid black;
+} 
+
+.five {
+	background-image: asset-url('Stories.png');
+	background-size: 100%;
+	border: 1px solid black;
+} 
+
+.six {
+	background-image: asset-url('discover.png');
+	background-size: 100%;
+	border: 1px solid black;
+} 
+
+

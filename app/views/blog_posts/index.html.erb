@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1 align="center">Blog Posts</h1></br>
+
+<% @blog_posts.each do |post| %>
+<div class="row">
+  <div class="col-xs-8 col-xs-offset-2">
+    <div class="well well-lg">
+      <div class="article-title">
+       <h2 align="center"> <%= link_to post.title, blog_posts_path(@blog_post)%></h2>
+      </div>
+      <div class="article-body">
+       <p align="center"> <%= truncate(post.body, length: 100) %></p>
+        
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
+<% end %>

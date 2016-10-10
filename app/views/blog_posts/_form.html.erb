@@ -1,0 +1,35 @@
+<%= form_for(blog_post) do |f| %>
+  <% if blog_post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(blog_post.errors.count, "error") %> prohibited this blog_post from being saved:</h2>
+
+      <ul>
+      <% blog_post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<div class="panel panel-default">
+  <div class="panel-body">
+  
+  <div class="form-group">
+      <%= f.label :title %> 
+      <%= f.text_field :title, class: "form-control", placeholder: "Titel" %>
+    </div>
+
+     <div class="form-group">
+      <%= f.label :body %>
+      <%= f.text_area :body, class: "form-control",placeholder: "Beschreibung" %>
+    </div>
+
+
+  <div class="actions">
+    <%= f.submit class: "btn btn-success" %>
+  </div>
+</div>
+</div>
+
+<% end %>
