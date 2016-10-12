@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  scope :api, defaults: {format: :json} do
+  resources :resources
+end
+
   get 'snapmentor' => "snap_mentor#index"
   get 'images_data' => "pages#images"
   get 'search_snaps', to: 'snaps#search'

@@ -2,10 +2,11 @@ class SnapsController < ApplicationController
   before_action :set_snap, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_admin!, except: [:index, :show, :search]
 
+
   # GET /snaps
   # GET /snaps.json
   def index
-    @snaps = Snap.paginate(page: params[:page], per_page: 26)
+    @snaps = Snap.all
   end
 
   # GET /snaps/1
