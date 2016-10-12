@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'nokogiri'
+gem 'rack', '~>2.0'
+gem 'rspec', :require => 'spec'
+
 
 
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
@@ -18,8 +22,7 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
-gem 'nokogiri'
-gem 'o2h'
+
 
 
 group :development, :test do
