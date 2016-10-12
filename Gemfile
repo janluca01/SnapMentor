@@ -16,13 +16,12 @@ gem 'masonry-rails'
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap'
 gem 'listen'
-
-
-
-
+gem 'ruby_dep'
 
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
+
+
 
 group :development, :test do
      gem 'sqlite3'
@@ -32,6 +31,5 @@ group :production do
      gem 'pg'
      gem 'rails_12factor'
 end
-
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
