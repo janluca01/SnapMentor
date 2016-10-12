@@ -16,13 +16,11 @@ gem 'bootstrap-sass'
 gem 'masonry-rails'
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap'
-
-
-
-
-
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
+gem 'nokogiri'
+gem 'o2h'
+
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -37,5 +35,3 @@ end
 
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-#jaksdföadfks
