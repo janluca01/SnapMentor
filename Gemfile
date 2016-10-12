@@ -24,7 +24,9 @@ gem 'jbuilder', '~> 2.5'
 
 
 
-
+group :development, :test do
+     gem 'sqlite3'
+end
 
 group :production do
      gem 'pg'
