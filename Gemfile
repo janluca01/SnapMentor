@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
      gem 'sqlite3'
+     gem 'listen'
 end
 
 group :production do
