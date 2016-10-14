@@ -10,7 +10,7 @@
       <%= link_to image_tag(snap.image.url(:medium)), snap %>
      
         <h4><%= snap.description %></h4>
-        <p style="text-align:center"><h5><%= link_to "Adden", "https://www.snapchat.com/add/#{snap.link}" %></h5></p>
+        <div  style="text-align:center"><p><h5><%= link_to "Adden", "https://www.snapchat.com/add/#{snap.link}" %></h5></p></div>
 
         <% if snap.categories.any? %>
           <h6>Kategorien: <%= render snap.categories %></h6>

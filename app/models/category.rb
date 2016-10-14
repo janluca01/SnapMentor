@@ -1,6 +1,7 @@
 class Category < ApplicationRecord
 	has_many :snap_categories
 	has_many :snaps, through: :snap_categories
+	belongs_to :admin
 	
 	validates :name, presence: true, length: { maximum: 25, minimum: 3 }
 	validates_uniqueness_of :name

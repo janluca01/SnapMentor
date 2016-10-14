@@ -25,6 +25,7 @@ class SnapsController < ApplicationController
 
   # GET /snaps/1/edit
   def edit
+
   end
 
   # POST /snaps
@@ -57,12 +58,9 @@ def create
   # DELETE /snaps/1
   # DELETE /snaps/1.json
   def destroy
-    @snap.user = current_admin
     @snap.destroy
-    respond_to do |format|
-      format.html { redirect_to snaps_url, notice: 'Snap was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    flash[:danger] = "Snap was successfully deleted"
+    redirect_to snaps_path
   end
 
   private

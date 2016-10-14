@@ -1,14 +1,32 @@
 <h1 align="center">Alle Kategorien</h1>
 
-<div id="snaps" class="transitions-enabled">
+<div id="categories" class="transitions-enabled">
   <% @categories.each do |category| %>
     <div class="box panel panel-default">
       <div class="panel-body">
-        <%= link_to image_tag(category.image.url(:medium)), category %>
+       <%= link_to image_tag(category.image.url(:medium)), category %>
       </div>
-      <h3 align="center"><%= link_to category.name, category %></h3>
-    </div>
+      <h3 align="center">
+        <%= link_to category.name, category %>
+      </h3>
+      <div class="panel-footer">
+        <% if category.admin = current_admin %>
+          <div class="actions">
+           
+            <%= link_to edit_category_path(category) do %>
+              <span class="glyphicon glyphicon-pencil"></span>
+              Edit
+            <% end %>
 
+            <%= link_to category, method: :delete, data: { confirm: 'Are you sure?' } do %>
+              <span class="glyphicon glyphicon-trash"></span>
+              Delete
+            <% end %>
+
+          </div>
+        <% end %>
+      </div>
+    </div>
   <% end %>
 </div>
 

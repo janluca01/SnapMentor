@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
-  scope :api, defaults: {format: :json} do
-  resources :resources
-end
+
 
   get 'snapmentor' => "snap_mentor#index"
   get 'images_data' => "pages#images"
@@ -12,7 +10,7 @@ end
 
   resources :blog_posts
   resources :snaps
-  resources :categories, except: [:destroy]
+  resources :categories
 
   devise_for :admins, path_names: {
     sign_up: ''
