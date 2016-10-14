@@ -65,8 +65,13 @@ a.btn.btn-lg.btn-danger.red{
 	border: 1px solid black;
 } 
 
-.paddingbottom {
-	padding-bottom: 15px;
+.logo {
+	background-image: asset-url('logo.png');
+	background-repeat: no-repeat;
+	padding-right: 120px;
+	padding-left: 10px;
+	margin-top: 11px;
+
 }
 
 
