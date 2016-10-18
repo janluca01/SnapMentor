@@ -31,11 +31,8 @@ class CategoriesController < ApplicationController
     @category.admin = current_admin
     if @category.save
       flash[:success] = "Category was successfully created"
-<<<<<<< HEAD
       redirect_to categories_path
-=======
       redirect_to category_path(@category)
->>>>>>> b09d39f6c81ace6661790f9d5180406a3d24503a
     else
       render 'new'
     end
