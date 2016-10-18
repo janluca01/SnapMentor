@@ -11,7 +11,6 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
-
     @category_snaps = @category.snaps.paginate(page: params[:page], per_page: 5)
   end
 
