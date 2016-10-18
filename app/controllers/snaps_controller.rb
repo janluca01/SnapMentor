@@ -34,7 +34,7 @@ def create
     @snap.admin = current_admin
     if @snap.save
       flash[:success] = "Snap was successfully created"
-      redirect_to snap_path(@snap)
+      redirect_to snaps_path
     else
       render 'new'
     end
