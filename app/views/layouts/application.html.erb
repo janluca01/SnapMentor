@@ -6,38 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "SnapMentor" %></title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag "application", :media => "all" %>
-
     <%= favicon_link_tag 'favicon.ico' %>
-
     <%= javascript_include_tag "application" %>
   </head>
 
   <body>
 
 
-    <div class="container-fluid">
-        <% if admin_signed_in? %>
-  <%= render "layouts/admin-nav" %>
+
+  <% if admin_signed_in? %>
+    <%= render "layouts/admin-nav" %>
   <% else %> 
-  <%= render 'layouts/nav' %>
+    <%= render 'layouts/nav' %>
   <% end %>
-      <div class="row">
-        <div class="col-md-12">
-           <% flash.each do |name, msg| %>
+
+ <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+      <% flash.each do |name, msg| %>
         <%= content_tag(:div, msg, class: "alert alert-info") %>
-       <% end %>
-          <%= yield %>
-        </div>
-        
-      </div><!--/row-->
+      <% end %>
 
-      <footer>
-      <!-- content for footer -->
-      </footer>
-
-    </div> <!-- /container -->
+      <%= yield %>
+    </div>
+  </div><!--/row-->
+  <footer>
+  <!-- content for footer -->
+  </footer>
+</div> <!-- /container -->
 
   </body>
 </html>

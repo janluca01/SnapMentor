@@ -1,9 +1,12 @@
-
+.navbar-brand {
+	margin-bottom: 10px;
+	margin-top: -2px;
+}
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 .badge {
-	background-color: #CEF6F5;
+	background-color: #FFFC00;
 	text-transform: uppercase;
 	letter-spacing: -1px;
 	font-weight: bold;
@@ -74,6 +77,31 @@ a.btn.btn-lg.btn-danger.red{
 
 }
 
-a{
-	text-decoration: none;
+a {
+	color: black;
 }
+
+a:hover {
+	color: black;
+}
+
+.hallo {
+	img {
+		margin-bottom: 100px;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

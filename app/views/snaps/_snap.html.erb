@@ -1,7 +1,7 @@
 <div id="snaps" class="transitions-enabled">
 
   <% obj.each do |snap| %>
-    <div class="box panel panel-default">
+    <div class="box panel panel-default text-body">
 
       <div class="panel-heading" style="text-align:center">
        <h3> <%= snap.title %> </h3>
@@ -13,8 +13,11 @@
         <div  style="text-align:center"><p><h5><%= link_to "Adden", "https://www.snapchat.com/add/#{snap.link}" %></h5></p></div>
 
         <% if snap.categories.any? %>
-          <h6>Kategorien: <%= render snap.categories %></h6>
+          <h6><%= render snap.categories %></h6>
         <% end %>
+
+
+
         
         <% if snap.admin = current_admin %>
           <div class="actions">
