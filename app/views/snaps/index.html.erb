@@ -1,5 +1,9 @@
-<%= will_paginate @snaps %>
+<div align="center">
+	<%= will_paginate @snaps, renderer: BootstrapPagination::Rails%>
+</div>
 
 <%= render 'snap', obj: @snaps %>
 
-<%= will_paginate @snaps %>
+<div align="center">
+	<%= will_paginate @snaps, renderer: BootstrapPagination::Rails%>
+</div>
