@@ -12,7 +12,6 @@ class SnapsController < ApplicationController
   # GET /snaps/1
   # GET /snaps/1.json
   def show
-
   end
 
 
@@ -25,7 +24,7 @@ class SnapsController < ApplicationController
 
   # GET /snaps/1/edit
   def edit
-
+    @snap = Snap.find(params[:id])
   end
 
   # POST /snaps

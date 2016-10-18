@@ -26,6 +26,12 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :bucket => ENV['S3_BUCKET_NAME']
+  }
+
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 

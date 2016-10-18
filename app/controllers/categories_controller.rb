@@ -11,7 +11,6 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
-
     @category_snaps = @category.snaps.paginate(page: params[:page], per_page: 5)
   end
 
@@ -22,6 +21,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories/1/edit
   def edit
+    @category = Category.find(params[:id])
   end
 
   # POST /categories
@@ -31,7 +31,11 @@ class CategoriesController < ApplicationController
     @category.admin = current_admin
     if @category.save
       flash[:success] = "Category was successfully created"
+<<<<<<< HEAD
       redirect_to categories_path
+=======
+      redirect_to category_path(@category)
+>>>>>>> b09d39f6c81ace6661790f9d5180406a3d24503a
     else
       render 'new'
     end
