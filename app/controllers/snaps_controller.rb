@@ -6,7 +6,7 @@ class SnapsController < ApplicationController
   # GET /snaps
   # GET /snaps.json
   def index
-    @snaps = Snap.all
+    @snaps = Snap.paginate(page: params[:page], per_page: 25)
   end
 
   # GET /snaps/1
