@@ -6,7 +6,7 @@ class SnapsController < ApplicationController
   # GET /snaps
   # GET /snaps.json
   def index
-    @snaps = Snap.all
+    @snaps = Snap.paginate(page: params[:page], per_page: 25)
   end
 
   # GET /snaps/1
@@ -71,6 +71,6 @@ def create
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def snap_params
-      params.require(:snap).permit(:title, :description, :link, :image, category_ids: [])
+      params.require(:snap).permit(:title, :description, :link, category_ids: [])
     end
 end
