@@ -15,6 +15,8 @@ gem 'bootstrap-sass'
 gem 'masonry-rails'
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap'
+gem 'listen'
+gem 'minitest'
 
 
 
@@ -32,6 +34,7 @@ end
 group :production do
      gem 'pg'
      gem 'rails_12factor'
+
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
