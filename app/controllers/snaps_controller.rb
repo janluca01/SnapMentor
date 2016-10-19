@@ -33,6 +33,7 @@ def create
     @snap = Snap.new(snap_params)
     @snap.admin = current_admin
     if @snap.save
+      MentorMailer.sample_email(@admin).deliver
       flash[:success] = "Snap was successfully created"
       redirect_to snap_path(@snap)
     else

@@ -204,6 +204,7 @@ DEPENDENCIES
   jquery-rails
   listen
   masonry-rails
+  minitest
   paperclip
   pg
   puma (~> 3.0)
@@ -218,4 +219,4 @@ DEPENDENCIES
   will_paginate-bootstrap
 
 BUNDLED WITH
-   1.13.3
+   1.13.5
