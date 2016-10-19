@@ -202,6 +202,7 @@ DEPENDENCIES
   jquery-rails
   listen
   masonry-rails
+  minitest
   paperclip
   pg
   puma (~> 3.0)
