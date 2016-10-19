@@ -4,9 +4,10 @@ Rails.application.routes.draw do
 
   get 'snapmentor' => "snap_mentor#index"
   get 'images_data' => "pages#images"
-  get 'search_snaps', to: 'snaps#search'
+  get 'search_snaps'=> 'snaps#search'
+  get 'impressum' => "pages#impressum"
 
-  root 'snaps#index'
+  root 'snap_mentor#index'
 
   resources :blog_posts
   resources :snaps

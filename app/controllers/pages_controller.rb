@@ -4,4 +4,7 @@ class PagesController < ApplicationController
 
   def images
   end
+
+  def impressum
+  end
 end
