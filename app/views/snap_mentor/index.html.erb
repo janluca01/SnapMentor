@@ -1,3 +1,4 @@
+<% if !user_signed_in? %> 
 <div class="jumbotron snapyellow" align="center">
 	<h1> Lerne Snapchat in nur 5 Tagen </h1>
 	<h2> Täglich ein neuer Schritt, um das perfekte Snapchat-Profil zu erstellen </h2>
@@ -5,6 +6,7 @@
 </div>
 
 <!-- Images start -->
+
 <div class="row">
 
 <div class="col-md-2">
@@ -43,7 +45,15 @@
 		</div>
 </div>
 </div>
+<% end %>
 <!-- Images end -->
+<% if user_signed_in? %>
+	<p>
+	Hier Timer bis 16 Uhr
+</p>
+<% end %>
+
+
 
 <div class="row">
 	<div class="col-md-8">
@@ -106,7 +116,7 @@
 		<div class="panel panel-default">
 			<div class="panel-body panel-heading-privat">
 				<h2 align="center"> Privat </h2>
-				<h3 align="center"> 9.99 € </h3>
+				<% if !user_signed_in? %><h3 align="center"> 9.99 € </h3><% end %>
 			</div>
 			<div class="panel-body">
 				<table class="table table-hover big-text">
@@ -128,6 +138,7 @@
 					</tr></br>
 				</table>
 			</div>
+			<% if user_signed_in? %>
 			<div align="center" class="panel-footer">
 				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 					<input type="hidden" name="cmd" value="_s-xclick">
@@ -143,6 +154,7 @@
 				</form>
 
 			</div>
+			<% end %>
 		</div>
 	</div>
 
@@ -150,7 +162,7 @@
 		<div class="panel panel-default">
 		<div class="panel-body panel-heading-business">
 			<h2 align="center"> Business </h2>
-			<h3 align="center"> 19.99 € </h3>
+			<% if !user_signed_in? %><h3 align="center"> 19.99 € </h3><% end %>
 		</div>
 		<div class="panel-body padding-bottom">
 			<table class="table table-hover big-text">
@@ -172,6 +184,7 @@
 
 			</table>
 		</div>
+		<% if user_signed_in? %>
 		<div align="center" class="panel-footer">
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 				<input type="hidden" name="cmd" value="_s-xclick">
@@ -185,9 +198,8 @@
 				<input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
 				<img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
 			</form>
-
-
 		</div>
+		<% end %>
 		</div>
 	</div>
 </div>
