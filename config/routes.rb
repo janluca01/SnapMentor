@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'search_snaps'=> 'snaps#search'
   get 'impressum' => "pages#impressum"
 
+
   root 'snap_mentor#index'
 
   resources :blog_posts
@@ -16,7 +17,7 @@ Rails.application.routes.draw do
   devise_for :admins, path_names: {
     sign_up: ''
   }
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => 'registrations' }
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
