@@ -37,39 +37,63 @@ a.btn.btn-lg.btn-danger.red{
 
 .one {
 	background-image: asset-url('Profilepage.png');
-	background-size: 100%;
-	align: center;
+	background-size: cover;
+	background-repeat: no repeat;
+	background-position: center;
 	border: 1px solid black;
+	padding-bottom: 220px;
+	border-radius: 15px;
 } 
 
 .two {
 	background-image: asset-url('story.png');
-	background-size: 100%;
+	background-size: cover;
+	background-repeat: no repeat;
+	background-position: center;
 	border: 1px solid black;
+	padding-bottom: 180px;
+	border-radius: 15px;
 } 
 
 .three {
 	background-image: asset-url('EmmaLee_.png');
-	background-size: 100%;
+	background-size: cover;
+	background-repeat: no repeat;
+	background-position: center;
 	border: 1px solid black;
+	padding-bottom: 260px;
+	margin-bottom: 30px;
+	border-radius: 15px;
 } 
 
 .four {
 	background-image: asset-url('Snapchat-large.png');
-	background-size: 100%;
+	background-size: cover;
+	background-repeat: no repeat;
+	background-position: center;
 	border: 1px solid black;
+	padding-bottom: 620px;
+	border-radius: 15px;
 } 
 
 .five {
 	background-image: asset-url('Stories.png');
-	background-size: 100%;
+	background-size: cover;
+	background-repeat: no repeat;
+	background-position: center;
 	border: 1px solid black;
+	padding-bottom: 220px;
+	border-radius: 15px;
 } 
 
 .six {
 	background-image: asset-url('discover.png');
-	background-size: 100%;
+	background-size: cover;
+	background-repeat: no repeat;
+	background-position: center;
 	border: 1px solid black;
+	padding-bottom: 220px;
+	border-radius: 15px;
 } 
 
 .logo {
