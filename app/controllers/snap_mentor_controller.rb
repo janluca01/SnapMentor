@@ -1,4 +1,4 @@
 class SnapMentorController < ApplicationController
-  def index
+  def indexs
   end
 end
