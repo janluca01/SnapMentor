@@ -137,8 +137,9 @@
 					</tr></br>
 				</table>
 			</div>
-			<% if user_signed_in? %>
 			<div align="center" class="panel-footer">
+			<% if user_signed_in? %>
+			
 				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 					<input type="hidden" name="cmd" value="_s-xclick">
 					<input type="hidden" name="hosted_button_id" value="LEMRDWC4H26KQ">
@@ -152,8 +153,13 @@
 					<img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
 				</form>
 
-			</div>
+			
 			<% end %>
+
+			<% if !user_signed_in? %>
+			<%= link_to "Anmelden", new_user_registration_path, class: "btn btn-lg btn-danger red"%>
+		<% end %>
+		</div>
 		</div>
 	</div>
 
@@ -183,8 +189,9 @@
 
 			</table>
 		</div>
-		<% if user_signed_in? %>
 		<div align="center" class="panel-footer">
+		<% if user_signed_in? %>
+		
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 				<input type="hidden" name="cmd" value="_s-xclick">
 				<input type="hidden" name="hosted_button_id" value="BP48EXCJTAN3C">
@@ -197,8 +204,13 @@
 				<input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
 				<img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
 			</form>
-		</div>
+		
 		<% end %>
+		<% if !user_signed_in? %>
+			<%= link_to "Anmelden", new_user_registration_path, class: "btn btn-lg btn-danger red"%>
+		<% end %>
+		</div>
+
 		</div>
 	</div>
 </div>
