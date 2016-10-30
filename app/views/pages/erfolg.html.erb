@@ -1,16 +1,5 @@
+
 <% if !user_signed_in? %>
-
-<div class="row">
-	<div class="col-md-2 col-md-2-offset"></div>
-	<div class="col-md-8">
-		<div class="jumbotron snapyellow"> <h2 align="center">Du musst 				eingeloggt sein um in diesen Bereich der Seite zu kommen.</h2>
-			<div align="center"><%= link_to "Anmelden", new_user_registration_path, class: "btn btn-lg btn-danger red"%></div>
-		</div>
-	</div>
-</div>
-
-<% end %>
-<% if user_signed_in? %>
 <div class="col-md-6">
 		<div class="panel panel-default">
 			<div class="panel-body panel-heading-privat">
@@ -40,6 +29,8 @@
 			<div align="center" class="panel-footer">
 
 			
+				<% if user_signed_in? %>
+			
 				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 					<input type="hidden" name="cmd" value="_s-xclick">
 					<input type="hidden" name="hosted_button_id" value="LEMRDWC4H26KQ">
@@ -52,6 +43,13 @@
 					<input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
 					<img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
 				</form>
+
+			
+			<% end %>
+
+			<% if !user_signed_in? %>
+			<%= link_to "Anmelden", new_user_registration_path, class: "btn btn-lg btn-danger red"%>
+		<% end %>
 
 			
 
@@ -90,6 +88,8 @@
 		<div align="center" class="panel-footer">
 		
 		
+			<% if user_signed_in? %>
+		
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 				<input type="hidden" name="cmd" value="_s-xclick">
 				<input type="hidden" name="hosted_button_id" value="BP48EXCJTAN3C">
@@ -103,6 +103,10 @@
 				<img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
 			</form>
 		
+		<% end %>
+		<% if !user_signed_in? %>
+			<%= link_to "Anmelden", new_user_registration_path, class: "btn btn-lg btn-danger red"%>
+		<% end %>
 
 		
 		</div>
@@ -110,4 +114,13 @@
 		</div>
 	</div>
 </div>
+
+<% else %>
+<div class="jumbotron snapyellow">
+	<h2 align="center"> Danke, dass Sie einen Email-kurs gekauft haben! </h2> 
+	<h3 align="center"> Jeden Tag um 17.00 kommt der nächste Schritt </h3>
+</div>
+<div class="well">
+	<h4 align="center"> Noch nicht gekauft? </h4>
+	<div align="center"><%= link_to "Hier kaufen", new_user_registration_path, class: "btn btn-md btn-danger red middle"%></div>
 <% end %>
