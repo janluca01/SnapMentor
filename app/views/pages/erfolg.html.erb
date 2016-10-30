@@ -1,0 +1,113 @@
+<% if !user_signed_in? %>
+
+<div class="row">
+	<div class="col-md-2 col-md-2-offset"></div>
+	<div class="col-md-8">
+		<div class="jumbotron snapyellow"> <h2 align="center">Du musst 				eingeloggt sein um in diesen Bereich der Seite zu kommen.</h2>
+			<div align="center"><%= link_to "Anmelden", new_user_registration_path, class: "btn btn-lg btn-danger red"%></div>
+		</div>
+	</div>
+</div>
+
+<% end %>
+<% if user_signed_in? %>
+<div class="col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-body panel-heading-privat">
+				<h2 align="center"> Privat </h2>
+<h3 align="center"> 9.99 € </h3>
+			</div>
+			<div class="panel-body">
+				<table class="table table-hover big-text">
+					<tr>
+						<th>Was ist Snapchat überhaupt? </th>
+					</tr>
+					
+					<tr>
+						<th> Wie benutze ich Snapchat? </th>
+					</tr>
+					<tr>
+						<th> Kann ich genauso coole Sachen wie die Kids posten? </th>
+					</tr>
+					<tr>
+						<th> Wie kann ich meine Snaps besser aussehen lassen? </th>
+					</tr>
+					<tr>
+						<th> Wem soll ich denn überhaupt folgen? </th>
+					</tr></br>
+				</table>
+			</div>
+			<div align="center" class="panel-footer">
+
+			
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="LEMRDWC4H26KQ">
+					<table>
+						<tr><td><input type="hidden" name="on0" value="Privat"><h4 align="center">Privat</h4></td></tr><tr><td><select name="os0">
+							<option value="SnapMentor Privat">SnapMentor Privat €9,99 EUR</option>
+						</select> </td></tr>
+					</table>
+					<input type="hidden" name="currency_code" value="EUR"></br>
+					<input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
+					<img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
+				</form>
+
+			
+
+
+			
+		</div>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="panel panel-default">
+		<div class="panel-body panel-heading-business">
+			<h2 align="center"> Business </h2>
+			<h3 align="center"> 19.99 € </h3>
+		</div>
+		<div class="panel-body padding-bottom">
+			<table class="table table-hover big-text">
+				<tr>
+					<th> Was ist Snapchat? </th>
+				</tr>
+				<tr>
+					<th> <p>Wie nutze ich Snapchat optimal für mein Unternehmen? </p></th>
+				</tr>
+				<tr>
+					<th> Wie erstelle ich Stories, die begeistern? </th>
+				</tr>
+				<tr>
+					<th> Wie mache ich mein Snapchat noch besser? </th>
+				</tr>
+				<tr>
+					<th> Welche Werbemöglichkeiten gibt es? </th>
+				</tr>
+
+			</table>
+		</div>
+		<div align="center" class="panel-footer">
+		
+		
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+				<input type="hidden" name="cmd" value="_s-xclick">
+				<input type="hidden" name="hosted_button_id" value="BP48EXCJTAN3C">
+				<table>
+					<tr><td><input type="hidden" name="on0" value="Business"><h4 align="center">Business</h4></td></tr><tr><td><select name="os0">
+						<option value="SnapMentor Business">SnapMentor Business €19,99 EUR</option>
+					</select> </td></tr>
+				</table>
+				<input type="hidden" name="currency_code" value="EUR"> </br>
+				<input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
+				<img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
+			</form>
+		
+
+		
+		</div>
+
+		</div>
+	</div>
+</div>
+<% end %>

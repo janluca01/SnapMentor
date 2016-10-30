@@ -1,13 +1,9 @@
 class PagesController < ApplicationController
+
   def home
   end
 
-  def images
+  def erfolg
   end
-
-  def impressum
-  end
-
-  def agb
-  end
+  
 end
