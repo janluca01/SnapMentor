@@ -28,7 +28,7 @@ Rails.application.routes.draw do
 
   get 'eltern/bezahlen' => "twocharges#new"
   post 'eltern/bezahlen' => "twocharges#new"
-  get 'danke' => "twocharges#create"
+  get 'vielendank' => "twocharges#create"
 
 
 
