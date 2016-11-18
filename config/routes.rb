@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   resources :blog_posts
   resources :snaps
   resources :categories
+  resources :charges
 
   devise_for :admins, path_names: {
     sign_up: ''
