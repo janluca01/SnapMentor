@@ -21,14 +21,14 @@ Rails.application.routes.draw do
   resources :categories
 
 
-  get 'danke' => "charges#create"
+
   get 'business/bezahlen' => "charges#new"
-  post 'business/bezahlen' => "charges#create"
+  post 'danke' => "charges#create"
 
 
-  get 'vielendank' => "twocharges#create"
+
   get 'eltern/bezahlen' => "twocharges#new"
-  post 'eltern/bezahlen' => "twocharges#create"
+  post 'vielendank' => "twocharges#create"
   
 
 
