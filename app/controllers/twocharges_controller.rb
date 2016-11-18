@@ -15,7 +15,7 @@ def create
     :customer    => customer.id,
     :amount      => @amount,
     :description => 'Eltern',
-    :currency    => 'usd'
+    :currency    => 'eur'
   )
 
 rescue Stripe::CardError => e
