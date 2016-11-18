@@ -1,6 +1,6 @@
 class TwochargesController < ApplicationController
 	def new
-end
+  end
 
 def create
   # Amount in cents
