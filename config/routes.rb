@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   get 'danke' => "charges#create"
   get 'danke' => "twocharges#create"
   get 'business/bezahlen' => "charges#new"
-  post 'business/bezahlen' => "charges#index"
+  post 'business/bezahlen' => "charges#create"
 
 
   get 'eltern/bezahlen' => "twocharges#new"
