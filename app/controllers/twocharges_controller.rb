@@ -1,6 +1,6 @@
-class ChargesController < ApplicationController
+class TwochargesController < ApplicationController
 	def new
-	end
+end
 
 def create
   # Amount in cents
@@ -14,12 +14,12 @@ def create
   charge = Stripe::Charge.create(
     :customer    => customer.id,
     :amount      => @amount,
-    :description => 'Business',
-    :currency    => 'eur'
+    :description => 'Eltern',
+    :currency    => 'usd'
   )
 
 rescue Stripe::CardError => e
   flash[:error] = e.message
-  redirect_to new_charge_path
+  redirect_to new_twocharge_path
 end
 end

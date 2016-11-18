@@ -138,27 +138,7 @@
 				</table>
 			</div>
 			<div align="center" class="panel-footer">
-			<% if user_signed_in? %>
 			
-				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-					<input type="hidden" name="cmd" value="_s-xclick">
-					<input type="hidden" name="hosted_button_id" value="LEMRDWC4H26KQ">
-					<table>
-						<tr><td><input type="hidden" name="on0" value="Privat"><h4 align="center">Privat</h4></td></tr><tr><td><select name="os0">
-							<option value="SnapMentor Privat">SnapMentor Privat €9,99 EUR</option>
-						</select> </td></tr>
-					</table>
-					<input type="hidden" name="currency_code" value="EUR"></br>
-					<input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
-					<img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
-				</form>
-
-			
-			<% end %>
-
-			<% if !user_signed_in? %>
-			<%= link_to "Anmelden", new_user_registration_path, class: "btn btn-lg btn-danger red"%>
-		<% end %>
 		</div>
 		</div>
 	</div>
@@ -167,7 +147,7 @@
 		<div class="panel panel-default">
 		<div class="panel-body panel-heading-business">
 			<h2 align="center"> Business </h2>
-			<% if !user_signed_in? %><h3 align="center"> 19.99 € </h3><% end %>
+			<% if !user_signed_in? %><h3 align="center"> 9.99 € </h3><% end %>
 		</div>
 		<div class="panel-body padding-bottom">
 			<table class="table table-hover big-text">
@@ -190,25 +170,7 @@
 			</table>
 		</div>
 		<div align="center" class="panel-footer">
-		<% if user_signed_in? %>
-		
-			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-				<input type="hidden" name="cmd" value="_s-xclick">
-				<input type="hidden" name="hosted_button_id" value="BP48EXCJTAN3C">
-				<table>
-					<tr><td><input type="hidden" name="on0" value="Business"><h4 align="center">Business</h4></td></tr><tr><td><select name="os0">
-						<option value="SnapMentor Business">SnapMentor Business €19,99 EUR</option>
-					</select> </td></tr>
-				</table>
-				<input type="hidden" name="currency_code" value="EUR"> </br>
-				<input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
-				<img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
-			</form>
-		
-		<% end %>
-		<% if !user_signed_in? %>
-			<%= link_to "Anmelden", new_user_registration_path, class: "btn btn-lg btn-danger red"%>
-		<% end %>
+			<%= link_to "Kaufen", new_charge_path %>
 		</div>
 
 		</div>

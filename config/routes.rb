@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
 
+  devise_for :admins, path_names: { sign_up: '' }
+  devise_for :users, :controllers => { :registrations => 'registrations', 
+                                       :sessions => 'sessions' }
 
-  get 'pages/home'
+
+  root 'snap_mentor#index'
 
   get 'snapmentor' => "snap_mentor#index"
   get 'bilderdaten' => "pages#images"
@@ -12,17 +16,25 @@ Rails.application.routes.draw do
   get 'erfolg' => "pages#erfolg"
 
 
-  root 'snap_mentor#index'
-
   resources :blog_posts
   resources :snaps
   resources :categories
-  resources :charges
 
-  devise_for :admins, path_names: {
-    sign_up: ''
-  }
-  devise_for :users, :controllers => { :registrations => 'registrations', :sessions => 'sessions' }
+
+  get 'danke' => "charges#create"
+  get 'danke' => "twocharges#create"
+  get 'business/bezahlen' => "charges#new"
+  post 'business/bezahlen' => "charges#index"
+
+
+  get 'eltern/bezahlen' => "twocharges#new"
+  post 'eltern/bezahlen' => "twocharges#index"
+
+
+
+  
+ 
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
