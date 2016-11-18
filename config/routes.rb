@@ -22,13 +22,13 @@ Rails.application.routes.draw do
 
 
   get 'danke' => "charges#create"
-  get 'danke' => "twocharges#create"
   get 'business/bezahlen' => "charges#new"
   post 'business/bezahlen' => "charges#create"
 
 
   get 'eltern/bezahlen' => "twocharges#new"
-  post 'eltern/bezahlen' => "twocharges#index"
+  post 'eltern/bezahlen' => "twocharges#new"
+  get 'danke' => "twocharges#create"
 
 
 
